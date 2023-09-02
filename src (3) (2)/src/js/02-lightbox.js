@@ -1,9 +1,9 @@
 import { galleryItems } from './gallery-items.js';
 
 document.addEventListener('DOMContentLoaded', function () {
+
   const gallery = document.querySelector('.gallery');
 
-  
   const galleryMarkup = galleryItems
     .map(({ preview, original, description }) => `
       <li class="gallery__item">
@@ -13,9 +13,10 @@ document.addEventListener('DOMContentLoaded', function () {
       </li>`)
     .join('');
 
+ 
   gallery.innerHTML = galleryMarkup;
 
-
+ 
   new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
     captionDelay: 250,
